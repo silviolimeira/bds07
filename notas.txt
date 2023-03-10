@@ -1,0 +1,8 @@
+Environment Setup:
+$ export PATH=/d/projeto-novo/nvm-noinstall:/d/nodejs-nvm/:$PATH
+
+Install nvm Node:
+$ nvm install 14.18.2
+
+Material Apoio:
+https://docs.google.com/document/d/10KBdHER6txB9v0wEcZysPKiHr-5aGzBw-we0-lV4JVs/edit

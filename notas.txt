@@ -6,3 +6,6 @@ $ nvm install 14.18.2
 
 Material Apoio:
 https://docs.google.com/document/d/10KBdHER6txB9v0wEcZysPKiHr-5aGzBw-we0-lV4JVs/edit
+
+Instalar o axios:
+$ yarn add axios;

@@ -10,13 +10,37 @@
 }
 
 .result-title {
-  color: #515151;
+  /*color: #515151;*/
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .result-description {
-  color: #515151;
+  /*color: #515151;*/
   font-size: 14px;
   margin: 0;
 }
+
+.result-container {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+}
+
+.result-container h3 {
+  font-size: 16px;
+}
+
+.result-container p {
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.result-container a, a:hover {
+  padding-left: 5px;
+  text-decoration: underline;
+  color: #0000ff;
+}
+
+

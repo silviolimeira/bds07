@@ -1,0 +1,134 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.search-container h1 {
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+  /*background-color: #f6f6f6;*/
+  border-radius: 5px;
+  background-color: green;/*#E6F7FF;*/
+
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-input {
+  background-color: #fff;
+  border: 1px solid #8c8c8c;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  height: 40px;
+  width: 240px;
+  margin-bottom: 25px;
+}
+
+.search-input::placeholder {
+  color: #d3cccc;
+}
+
+.search-button {
+  height: 40px;
+  width: 160px;
+  margin-bottom: 35px;
+  color: #fff;
+}
+
+/* ======================================================= */
+.info-container {
+   height: 500px;
+   width: 500px;
+   background-color: purple;
+
+   display: flex;
+   flex-direction: column;
+}
+
+.form-info {
+  height: 200px;
+  width: 800px;
+  background-color: green;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card {
+  width: 500px;
+  height: 200px;
+  background-color: red;
+  /*justify-content: space-between;*/
+}
+.info-card-content {
+  width: 500px;
+  height: 200px;
+}
+
+.info-card-avatar {
+  width: 247px;
+  height: 247px;
+  border-color: red 1px solid;
+  text-align: center;
+  vertical-align: center;
+  padding: 0;
+  margin: 0 29px;
+}
+
+.info-card-avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.base-info-card {
+  padding: 10px;
+  height: 247px;
+}
+
+
+.profile-info {
+  width: 534px;
+  height: 28px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  /* Semibold / 20 px | 28 px */
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+  display: flex;
+  align-items: center;
+
+  /* Daybreak Blue / blue-6 */
+
+  color: #1890FF;
+}
+
+/* ======================================================= */
+
+@media (min-width: 576px) {
+    .search-input {
+        width: 480px;
+    }
+}
+

@@ -1,23 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
 
-a,
-a:hover {
-  text-decoration: none;
-  color: unset;
+a, a:hover {
+    text-decoration: none;
+    color: unset;
+}
+
+.base-card {
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.base-info-card {
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid #D9D9D9;
 }

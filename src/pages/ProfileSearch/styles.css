@@ -61,9 +61,11 @@
 
 .info-avatar {
   margin: 43px 0px 44px 38px;
+  max-width: 247px;
 }  
 
 .info-profile {
+  width: calc(100% - 290px);
   margin: 43px 29px 44px 29px;
   background-color: #FFFFFF;
   border-radius: 6px;
@@ -78,3 +80,9 @@
   margin-bottom: 20px;
   color: #1890FF;
 }  
+
+@media(max-width: 576px) {
+  .info-profile {
+    width: 100%;
+  }
+}

@@ -57,7 +57,6 @@ const ProfileSearch = () => {
               type="text"
               name="profile"
               value={formData.profile}
-              className="search-input"
               placeholder="Usuário Github"
               onChange={handleChange}
             />

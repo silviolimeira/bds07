@@ -1,80 +1,47 @@
-/*
-.home-container {
-    padding: 40px;
-}
-
-
-.home-container h4 {
-
-}
-
-
-.start-button {
-    color: #fff;
-}
-*/
-
 .home-container {
     border: yellow 1px solid;
     padding-left: 41px;
 }
 
 .home-container h1 {
-    
-    /* Desafio Github API */
-
-
     padding-top: 48px;
     height: 64px;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 64px;
-    /* identical to box height, or 133% */
-
     display: flex;
     align-items: center;
     letter-spacing: 0.02em;
-
     color: #000000;
 }
 
 .home-container p {
-
     padding-top: 45px;
     padding-bottom: 45px;
     height: 40px;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 40px;
-    /* identical to box height, or 167% */
-
     display: flex;
     align-items: center;
     letter-spacing: 0.02em;
-
     color: #7E7E7E;
 }
 
 .start-button {
-
     height: 44px;
     top: calc(50% - 24px/2 - 210px);
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-
     display: flex;
     align-items: center;
     text-align: center;
-
     color: #FFFFFF;
 }

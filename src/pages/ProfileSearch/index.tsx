@@ -3,6 +3,7 @@ import './styles.css';
 import ResultCard from 'components/ResultCard';
 import { useState } from 'react';
 import axios from 'axios';
+import Loader from 'components/Loader';
 
 type FormData = {
   profile: string;
@@ -18,6 +19,7 @@ type ProfileInfo = {
 
 const ProfileSearch = () => {
   const [profileInfo, setProfileInfo] = useState<ProfileInfo>();
+  const [isLoading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState<FormData>({
     profile: '',
@@ -26,15 +28,16 @@ const ProfileSearch = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    setIsLoading(true);
     axios
       .get(`https://api.github.com/users/${formData.profile}`)
       .then((response) => {
         setProfileInfo(response.data);
-        console.log(response.data);
-        console.log(profileInfo);
+        setIsLoading(false);
       })
       .catch((error) => {
         setProfileInfo(undefined);
+        setIsLoading(false);
         console.log(error);
       });
   };
@@ -69,27 +72,34 @@ const ProfileSearch = () => {
           </button>
         </form>
       </div>
-      {profileInfo && (
-        <div className="info-data">
-          <div className="info-avatar">
-            <div className="info-avatar-img">
-              <img src={profileInfo.avatar_url} alt={profileInfo.avatar_url} />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        profileInfo && (
+          <div className="info-data">
+            <div className="info-avatar">
+              <div className="info-avatar-img">
+                <img
+                  src={profileInfo.avatar_url}
+                  alt={profileInfo.avatar_url}
+                />
+              </div>
+            </div>
+            <div className="info-profile">
+              <div className="info-profile-title">Informações</div>
+              <ResultCard title="Perfil:" description={profileInfo.url} />
+              <ResultCard
+                title="Seguidores:"
+                description={profileInfo.followers}
+              />
+              <ResultCard
+                title="Localidade:"
+                description={profileInfo.location}
+              />
+              <ResultCard title="Nome:" description={profileInfo.name} />
             </div>
           </div>
-          <div className="info-profile">
-            <div className="info-profile-title">Informações</div>
-            <ResultCard title="Perfil:" description={profileInfo.url} />
-            <ResultCard
-              title="Seguidores:"
-              description={profileInfo.followers}
-            />
-            <ResultCard
-              title="Localidade:"
-              description={profileInfo.location}
-            />
-            <ResultCard title="Nome:" description={profileInfo.name} />
-          </div>
-        </div>
+        )
       )}
     </div>
   );
